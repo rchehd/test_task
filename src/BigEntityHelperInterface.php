@@ -6,7 +6,7 @@ use Drupal\Core\Entity\EntityInterface;
 use Drupal\user\UserInterface;
 
 /**
- * @todo Add interface description.
+ * Provides an interface defining a BigEntityHelper service.
  */
 interface BigEntityHelperInterface {
 

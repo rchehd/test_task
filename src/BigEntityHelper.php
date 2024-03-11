@@ -14,7 +14,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\user\UserInterface;
 
 /**
- * @todo Add class description.
+ * Class of BigEntityHelper service.
  */
 class BigEntityHelper implements BigEntityHelperInterface {
 

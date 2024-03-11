@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   cron = {"time" = 60},
  * )
  */
-final class BigEntityProcessor extends QueueWorkerBase implements ContainerFactoryPluginInterface {
+class BigEntityProcessor extends QueueWorkerBase implements ContainerFactoryPluginInterface {
 
   use StringTranslationTrait;
 
