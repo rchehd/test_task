@@ -1,0 +1,5 @@
+name: 'Test Task'
+type: module
+description: 'Module for test task'
+package: Custom
+core_version_requirement: ^10

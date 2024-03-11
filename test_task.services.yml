@@ -1,0 +1,9 @@
+services:
+  test_task.big_entity_helper:
+    class: Drupal\test_task\BigEntityHelper
+    arguments:
+      - '@entity_type.manager'
+      - '@logger.factory'
+      - '@datetime.time'
+      - '@plugin.manager.mail'
+      - '@messenger'

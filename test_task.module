@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Test Task module.
+ */
+
+/**
+ * Implements hook_cron().
+ */
+function test_task_cron() {
+  /** @var \Drupal\test_task\BigEntityHelperInterface $big_entity_helper */
+  $big_entity_helper = \Drupal::service('test_task.big_entity_helper');
+  $entity_ids = $big_entity_helper->getEntityIdsForProcessing();
+  $chunks = array_chunk($entity_ids, 50, TRUE);
+  $queue = \Drupal::queue('big_entity_processor');
+  // Create queue item for every 50 entities.
+  foreach ($chunks as $chunk) {
+    $queue->createItem($chunk);
+  }
+
+}
